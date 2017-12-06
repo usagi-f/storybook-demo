@@ -2,34 +2,20 @@
 
 import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
+import CustomButton from '../components/CustomButton.vue';
 
-import MyButton from './MyButton.vue';
-import Welcome from './Welcome.vue';
-
-storiesOf('Welcome', module).add('to Storybook', () => ({
-  components: { Welcome },
-  template: '<welcome :showApp="action" />',
-  methods: { action: linkTo('Button') },
-}));
-
-storiesOf('Button', module)
+storiesOf('CustomButton', module)
   .add('with text', () => ({
-    components: { MyButton },
-    template: '<my-button @click="action">Hello Button</my-button>',
-    methods: { action: action('clicked') },
+    components: { CustomButton },
+    template: '<CustomButton>Hello Button</CustomButton>',
   }))
-  .add('with JSX', () => ({
-    components: { MyButton },
-    render() {
-      return <my-button onClick={this.action}>With JSX</my-button>;
-    },
-    methods: { action: linkTo('clicked') },
+  .add('color: Orange', () => ({
+    components: { CustomButton },
+    template: '<CustomButton color="orange">Orange Button</CustomButton>',
   }))
-  .add('with some emoji', () => ({
-    components: { MyButton },
-    template: '<my-button @click="action">😀 😎 👍 💯</my-button>',
-    methods: { action: action('clicked') },
+  .add('color: red', () => ({
+    components: { CustomButton },
+    template: '<CustomButton color="red">Red Button</CustomButton>',
   }));
 
 /* eslint-enable react/react-in-jsx-scope */
