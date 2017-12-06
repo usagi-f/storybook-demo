@@ -1,5 +1,10 @@
 <template>
-  <button type="button" class="btn" :class="[propsColor]">
+  <button
+    type="button"
+    class="btn"
+    :class="[propsColor]"
+    @click="handleClick"
+  >
     {{ text }}
   </button>
 </template>
@@ -12,6 +17,11 @@ export default {
     return {
       text: this.$slots.default[0].text,
       propsColor: this.color
+    }
+  },
+  methods: {
+    handleClick () {
+      console.log(`click: ${this.color ? this.color : 'default'}`)
     }
   }
 }
