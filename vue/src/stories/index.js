@@ -1,7 +1,4 @@
-/* eslint-disable react/react-in-jsx-scope */
-
 import { storiesOf } from '@storybook/vue';
-import { action } from '@storybook/addon-actions';
 import CustomButton from '../components/CustomButton.vue';
 
 storiesOf('CustomButton', module)
@@ -17,5 +14,3 @@ storiesOf('CustomButton', module)
     components: { CustomButton },
     template: '<CustomButton color="red">Red Button</CustomButton>',
   }));
-
-/* eslint-enable react/react-in-jsx-scope */
