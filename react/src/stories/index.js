@@ -1,13 +1,15 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-
-import { Button, Welcome } from '@storybook/react/demo';
-
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+import Button from '../button';
 
 storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>);
+  .add('with text', () => {
+    return <Button>Sample Text</Button>;
+  })
+  .add('color: Orange', () => {
+    return <Button color="orange">Orange Button</Button>;
+  })
+  .add('color: Red', () => {
+    return <Button color="red">Red Button</Button>;
+  });
