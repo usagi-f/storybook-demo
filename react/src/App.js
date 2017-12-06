@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import CustomButton from './button';
+import CustomButton from './CustomButton';
 
 class App extends Component {
   render() {
