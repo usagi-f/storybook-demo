@@ -1,15 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import Button from '../button';
+import CustomButton from '../CustomButton';
 
-storiesOf('Button', module)
+storiesOf('CustomButton', module)
   .add('with text', () => {
-    return <Button>Sample Text</Button>;
+    return <CustomButton>Sample Text</CustomButton>;
   })
   .add('color: Orange', () => {
-    return <Button color="orange">Orange Button</Button>;
+    return <CustomButton color="orange">Orange Button</CustomButton>;
   })
   .add('color: Red', () => {
-    return <Button color="red">Red Button</Button>;
+    return <CustomButton color="red">Red Button</CustomButton>;
   });

@@ -1,5 +1,5 @@
 import React from 'react';
-import './button.css';
+import './CustomButton.css';
 
 const className = (color) => {
   if (!color) return 'btn';
@@ -10,7 +10,7 @@ const handleClick = (color) => {
   console.log(`click: ${color ? color : 'default'}`);
 };
 
-const Button = (props) => {
+const CustomButton = (props) => {
   return (
     <button
       type="button"
@@ -22,4 +22,4 @@ const Button = (props) => {
   );
 };
 
-export default Button;
+export default CustomButton;

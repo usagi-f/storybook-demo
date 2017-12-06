@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Button from './button';
+import CustomButton from './button';
 
 class App extends Component {
   render() {
@@ -12,9 +12,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="App-buttonGroup">
-          <Button>Info Button</Button>
-          <Button color="orange">Warning Button</Button>
-          <Button color="red">Error Button</Button>
+          <CustomButton>Info Button</CustomButton>
+          <CustomButton color="orange">Warning Button</CustomButton>
+          <CustomButton color="red">Error Button</CustomButton>
         </div>
       </div>
     );
